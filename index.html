@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is-my.space | Claim Your Free Digital Space</title>
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description"
+        content="Secure your free permanent subdomain at is-my.space. Instant ID verification, zero cost, and yours for life. The easiest way to own your identity online.">
+    <meta name="keywords"
+        content="free subdomain, digital identity, personal website, free hosting, is-my.space, id verification, portfolio hosting">
+    <meta name="author" content="is-my.space">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="is-my.space | Free Digital Identity">
+    <meta property="og:description"
+        content="Get your free permanent subdomain today. Simple, secure, and free for life.">
+    <meta property="og:url" content="https://is-my.space">
+    <meta property="og:image" content="https://cf-cdn.is-my.space/logo-transparent.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Reset & Variables --- */
+        :root {
+            /* Light Theme Palette */
+            --bg-main: #ffffff;
+            --bg-secondary: #f8fafc;
+            /* Very light slate */
+            --text-main: #0f172a;
+            /* Slate 900 */
+            --text-muted: #64748b;
+            /* Slate 500 */
+
+            /* Blue-Purple Theme */
+            --primary: #4f46e5;
+            /* Indigo-600 */
+            --secondary: #0ea5e9;
+            /* Sky-500 */
+            --accent: #7c3aed;
+            /* Violet-600 */
+            --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+
+            --border-color: #e2e8f0;
+            --max-width: 1200px;
+            --nav-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* --- Utilities --- */
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: rgba(79, 70, 229, 0.05);
+        }
+
+        .text-gradient {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Header --- */
+        header {
+            height: var(--nav-height);
+            display: flex;
+            justify-content: center;
+            /* Added to help centering */
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            /* Translucent white */
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            display: block;
+            /* Fixes potential inline spacing issues */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            /* Ensures text links and button align vertically */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            /* Helps align text inside link */
+            align-items: center;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+            align-items: center;
+            /* Vertically center the icon */
+            justify-content: center;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Blob Animation - Adjusted for Light Theme */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 15s infinite ease-in-out reverse;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        /* --- Features / Vision Section --- */
+        .vision {
+            padding: 100px 0;
+            background: var(--bg-main);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: rgba(79, 70, 229, 0.1);
+            /* Light Indigo bg */
+            padding: 15px;
+            border-radius: 12px;
+            color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        /* --- How it Works --- */
+        .steps {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.05);
+            /* Subtle dark number */
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .step-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .step p {
+            color: var(--text-muted);
+        }
+
+        /* --- FAQ Section --- */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--bg-main);
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+        }
+
+        /* --- Fine Print & Footer --- */
+        footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+            background: #fafafa;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1.5rem;
+            /* If original logo is light, we might need filter: invert(1) brightness(0.2); here */
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Animations --- */
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(20px, 20px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .step {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#">
+                <img src="https://cf-cdn.is-my.space/logo-transparent.png" alt="is-my.space logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#vision">Our Vision</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://backend.is-my.space/panel/" class="btn btn-primary"
+                            style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Claim
+                            Space</a></li>
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Claim Your Corner of the <br><span class="text-gradient">Digital Universe</span></h1>
+            <p>Everyone deserves their own space on the internet. We make it possible for free. Verify your ID, grab
+                your unique subdomain, and own your identity online.</p>
+            <div class="hero-cta">
+                <a href="https://backend.is-my.space/panel/" class="btn btn-primary">Get Verified & Started</a>
+                <a href="#how" class="btn btn-outline" style="margin-left: 10px;">Learn More</a>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-muted); opacity: 0.8;">*Free for the life
+                of the service</p>
+        </div>
+    </section>
+
+    <!-- Vision / Features -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why <span class="text-gradient">is-my.space?</span></h2>
+                <p>The internet is getting crowded. Stand out with a clean, verified identity.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Totally Free</h3>
+                    <p>No hidden fees, no trial periods. You verify your ID once, and the subdomain is yours. We believe
+                        in democratizing the web.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>ID Verified</h3>
+                    <p>We use quick, secure ID verification to prevent bots and squatters. This ensures that
+                        <strong>yourname.u.is-my.space</strong> is actually owned by a real human.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to launch your space.</p>
+            </div>
+
+            <div class="step-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Verify Identity</h3>
+                        <p>Complete a quick 1-minute secure ID check. This keeps the community safe and real.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Choose Name</h3>
+                        <p>Pick your desired subdomain (e.g., <em>alex.is-my.space</em>). First come, first served!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Go Live</h3>
+                        <p>Your space is instantly active. Link it to your content and share it with the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container" style="max-width: 800px;">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is it really free?</h4>
+                <p>Yes! Our mission is to provide digital space for everyone. We cover the costs and ensure the core
+                    service is fully free.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Why do I need to verify my ID?</h4>
+                <p>To prevent name squatting and ensure every space belongs to a real person. We don't store your ID
+                    data longer than needed for verification.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What can I put on my space?</h4>
+                <p>Anything legal! Portfolios, "link in bio" pages, blogs, or just a redirect to your main social
+                    profile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="https://cf-cdn.is-my.space/logo-transparent.png" alt="is-my.space logo" class="footer-logo"
+                style="margin: 0 auto 20px;">
+            <div class="footer-links">
+                <a href="/terms/">Terms</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="mailto:admin@is-my.space">Contact</a>
+                <a href="mailto:abuse@is-my.space">Abuse Report</a>
+            </div>
+            <p>&copy; 2026 is-my.space. All rights reserved.</p>
+
+            <div class="disclaimer">
+                "Free for life" refers to the lifetime of the service. While we intend to run this service indefinitely,
+                we reserve the right to modify terms or discontinue service with notice. ID verification is required for
+                account creation.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
