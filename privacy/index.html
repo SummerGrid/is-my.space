@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | is-my.space</title>
+
+    <meta name="description"
+        content="Privacy Policy for is-my.space. How we handle your data and ID verification safely and securely.">
+    <meta name="robots" content="noindex, follow"> <!-- Keeping it low-key for search engines but following links -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Reuse Variables from Index for consistency --- */
+        :root {
+            --bg-main: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #4f46e5;
+            --secondary: #0ea5e9;
+            --accent: #7c3aed;
+            --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --border-color: #e2e8f0;
+            --max-width: 1200px;
+            --nav-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            /* Slightly more readable for text-heavy pages */
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* --- Header Reused --- */
+        header {
+            height: var(--nav-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: var(--max-width);
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        /* --- Policy Content Styling --- */
+        .policy-header {
+            padding: 180px 0 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, #f8fafc, #ffffff);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .policy-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .content-container {
+            width: 90%;
+            max-width: 800px;
+            /* Narrower width for reading comfort */
+            margin: 0 auto 100px;
+            padding-top: 60px;
+        }
+
+        .policy-section {
+            margin-bottom: 4rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        /* Cute little accent line under headings */
+        .policy-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--gradient);
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+
+        .policy-section p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .policy-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .policy-section li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(79, 70, 229, 0.05);
+            border: 1px solid rgba(79, 70, 229, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+            background: #fafafa;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .policy-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-container {
+                width: 95%;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="https://cf-cdn.is-my.space/logo-transparent.png" alt="is-my.space logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html" class="btn-primary">Claim Space</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="policy-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p style="color: var(--text-muted);">Effective Date: Feb 2026</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <div class="policy-section">
+            <h2>1. The Vibe Check (Introduction)</h2>
+            <p>Welcome to is-my.space! We respect your privacy big time. This document basically explains what we do
+                with your info. We're here to give you a cool subdomain, not to spy on you.</p>
+            <p>By using our service, you agree to the collection and use of information in accordance with this policy.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>2. What We Collect</h2>
+            <p>We keep it super minimal. We only ask for what we need to keep the lights on and the bots out:</p>
+            <ul>
+                <li><strong>Contact Info:</strong> Your email address. We need this to send you account details or help
+                    you if you get locked out.</li>
+                <li><strong>Subdomain Data:</strong> Obviously, we store the name of the space you claimed (like
+                    <em>alex.is-my.space</em>).</li>
+                <li><strong>Usage Data:</strong> Basic stuff like IP addresses and browser types for security logs and
+                    to stop DDoS attacks.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>3. The ID Verification Stuff</h2>
+            <div class="highlight-box">
+                <p><strong>This is important:</strong> To keep this service free and safe, we have to make sure you're a
+                    real person. We use a secure third-party provider for this.</p>
+                <ul>
+                    <li>We <strong>DO NOT</strong> store your ID photos or government documents on our servers.</li>
+                    <li>The verification happens securely via our partner. We only get a "Pass" or "Fail" result.</li>
+                    <li>Once the check is done, we don't hold onto that sensitive data. It's strictly for the "one
+                        person, one space" rule.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>4. Cookies & Tracking</h2>
+            <p>We use a few essential cookies to keep you logged in and maybe some lightweight analytics to see how many
+                people are visiting the site. We aren't selling your browsing history to advertisers.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>5. Your Rights</h2>
+            <p>It's your data. If you want to delete your account and release your subdomain back into the wild, you can
+                do that at any time from your dashboard. Deleting your account wipes your personal data from our active
+                database.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>6. Changes to This Policy</h2>
+            <p>We might update this from time to time as we grow. If we make big changes, we'll try to email you or put
+                a notice on the site.</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 4rem; color: var(--text-muted); font-size: 0.9rem;">
+            Questions? Slide into our DMs or email us at privacy@is-my.space
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 is-my.space. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
